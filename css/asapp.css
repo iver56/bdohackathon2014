@@ -87,3 +87,9 @@ a.back-button {
 .clear-both {
     clear: both;
 }
+
+.meter-image {
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+}
