@@ -86,7 +86,19 @@ a.back-button {
     white-space:normal;
 }​
 
-.receipt{
+.receipt {
     padding: 10.5rem;
+}
 
+.image-upload input
+{
+    display: none;
+}
+
+.image-upload img {
+    width: 100%;
+}
+
+.ui-btn-icon-right:after {
+    background-color: #2EAFA4 !important;
 }

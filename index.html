@@ -67,12 +67,15 @@
     </div>
 
     <div data-role="content">
-        <div class="buttons-wrapper">
-            <a href="#oppgaver">
-                <img src="images/buttons/button-ny-kvittering.png">
-            </a>
+        <div class="image-upload">
+            <label for="file-input">
+                <img src="images/buttons/button-ny-kvittering.png"/>
+            </label>
+
+            <input id="file-input" type="file" />
         </div>
-        <ul class="receipt" data-inset="true" data-role="listview">
+
+        <ul data-role="listview" data-inset="true">
             <li>
                 <a href="#kvittering">
                     <h3>Restaurant besøk</h3>
