@@ -84,12 +84,20 @@ a.back-button {
     height: 100%;
 }
 
-.clear-both {
-    clear: both;
-}
-
 .meter-image {
     display: block;
     width: 88%;
     margin: 0 auto;
+}
+
+.meter-text-status {
+    margin-top: -.25rem;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.company-name {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+    text-align: center;
 }
