@@ -26,11 +26,13 @@
 
     <div data-role="content">
         <div class="company-name">Microwax Systems AS</div>
-        <img src="images/meter_green.png" class="meter-image">
-        <div class="meter-text-status">Alt i orden :)</div>
+        <img src="images/meter_yellow.png" class="meter-image">
+        <div class="meter-text-status" style="display:none">Alt er i skjønneste orden :)</div>
+        <div class="meter-text-status" style="display:block">Snart må noe gjøres</div>
+        <div class="meter-text-status" style="display:none">Noe må gjøres nå!</div>
         <div class="buttons-wrapper">
             <a href="#oppgaver">
-                <img src="images/buttons/button-oppgaver.png">
+                <img src="images/buttons/button-oppgaver-yellow.png">
             </a>
             <a href="#endring">
                 <img src="images/buttons/button-endring.png">
@@ -65,33 +67,27 @@
     </div>
 
     <div data-role="content">
-        <div>
-            <div class="buttons-wrapper">
-                <a href="#oppgaver">
-                    <img src="images/buttons/button-ny-kvittering.png">
-                </a>
+        <div class="buttons-wrapper">
+            <a href="#oppgaver">
+                <img src="images/buttons/button-ny-kvittering.png">
+            </a>
         </div>
-            <ul class="receipt"  data-role="listview" data-theme="g">
+        <ul class="receipt" data-inset="true" data-role="listview">
             <li>
                 <a href="#kvittering">
                     <h3>Restaurant besøk</h3>
                     <p>25.02.14 </p>
                     <p>Sum: NOK 320,- </p>
-                </a> </li>
-
-            </ul>
-
-            <ul class="receipt"  data-role="listview" data-theme="a">
+                </a> 
+            </li>
             <li>
                 <a href="#kvittering2">
                     <h3>Tekniske innkjøp</h3>
                     <p>14.02.14 </p>
-                    <p>Sum: NOK 247,- </p>
-                </a> </li>
-                
-            </ul>
-
-        </div>
+                    <p>Sum: NOK 247,-</p>
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
 
@@ -112,33 +108,33 @@
         </div>
     </div>
 </div>
+
 <div id="kvittering" data-role="page">
     <div class="header">
         <a class="back-button" href="#bilag">
             <img src="images/back.png">
         </a>
         <h1>ASapp</h1>
-        <div class="clear-both"></div>
     </div>
 
     <div data-role="content">
         <div>
-             <img src="images/kvittering.jpg" width="99%" height="99%">
+             <img src="images/kvittering.jpg" width="99%">
         </div>
     </div>
 </div>
+
 <div id="kvittering2" data-role="page">
     <div class="header">
         <a class="back-button" href="#bilag">
             <img src="images/back.png">
         </a>
         <h1>ASapp</h1>
-        <div class="clear-both"></div>
     </div>
 
     <div data-role="content">
         <div>
-             <img src="images/kvittering2.jpg" width="99%" height="99%">
+             <img src="images/kvittering2.jpg" width="99%">
         </div>
     </div>
 </div>
