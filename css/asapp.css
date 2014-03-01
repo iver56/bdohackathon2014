@@ -28,4 +28,33 @@
     padding: 0 !important;
     color: white;
     font-size: 1.6rem !important;
+    line-height: 40px;
+}
+
+.home-app-grid {
+    width: 100%;
+    margin: 0;
+}
+
+.home-app-grid td {
+    width: 50%;
+    padding: 4%;
+}
+
+.home-app-grid td img {
+    width: 100%;
+}
+
+.home-app-grid td a {
+    display: block;
+    transition: all .1s;
+}
+
+.home-app-grid td a:active {
+    transform: scale(0.9, 0.9);
+    -webkit-transform: scale(0.9, 0.9);
+}
+
+.ui-content {
+    padding: 4% !important;
 }
