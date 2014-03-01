@@ -81,3 +81,11 @@ a.back-button {
 .buttons-wrapper img {
     width: 100%;
 }
+
+.ui-li-desc {
+    white-space:normal;
+}​
+.receipt{
+    padding: 10.5rem;
+
+}
