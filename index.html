@@ -80,10 +80,28 @@
 
     <div data-role="content">
         <div>
-            <a href="">
-                <button>Ny kvittering
-                </button>        
-            </a>
+            <a href="#nyansatt" data-role="button" data-icon="plus">Ny kvittering</a>
+            
+            <ul class="receipt"  data-role="listview" data-theme="g">
+            <li>
+                <a href="#kvittering">
+                    <h3>Restaurant besøk</h3>
+                    <p>25.02.14 </p>
+                    <p>Sum: NOK 320,- </p>
+                </a> </li>
+
+            </ul>
+
+            <ul class="receipt"  data-role="listview" data-theme="g">
+            <li>
+                <a href="#kvittering">
+                    <h3>Tekniske innkjøp</h3>
+                    <p>25.02.14 </p>
+                    <p>Sum: NOK 320,- </p>
+                </a> </li>
+                
+            </ul>
+
         </div>
     </div>
 </div>
@@ -109,6 +127,23 @@
         </div>
     </div>
 </div>
+<div id="kvittering" data-role="page">
+    <div class="header">
+        <a class="back-button" href="#index">
+            <img src="images/back.png">
+        </a>
+        <h1>ASapp</h1>
+        <div class="bdo-logo">
+            <img src="images/bdo_white.png">
+        </div>
+        <div class="clear-both"></div>
+    </div>
 
+    <div data-role="content">
+        <div>
+             <img src="images/kvittering.jpg" width="99%" height="99%">
+        </div>
+    </div>
+</div>
 </body>
 </html>
