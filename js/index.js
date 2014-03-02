@@ -43,6 +43,29 @@ $(document).on("click", ".task-done", function (e) {
     removeOppgave(id);
 });
 
+$(document).on("click", ".task-postpone", function (e) {
+    var $button = $(this),
+        id = $button.closest('div[data-role=page]').attr('id'),
+        msg = 'Oppgaven er utsatt. Du får beskjed om den senere.';
+    alertify.success(msg);
+    removeOppgave(id);
+});
+
+$(document).on("click", "a[href=#tildel]", function (e) {
+    var $button = $(this),
+        id = $button.closest('div[data-role=page]').attr('id');
+    removeOppgave(id);
+});
+
+$(document).on("click", "#tildel-epost", function (e) {
+    e.preventDefault();
+    alertify.prompt("Skriv inn e-postadressen", function (e, str) {
+        if (e) {
+            $.mobile.navigate("#tildelt");
+        }
+    }, "benediof@gmail.com");
+});
+
 function nyAnsatt(name) {
     addOppgave('skjema', 'Yrkesskadeforsikring for ' + name, '', false, 'yrkesskadeforsikring');
     addOppgave('skjema', 'Melde ansettelse til NAV', '17. mars', false, 'aamelding');

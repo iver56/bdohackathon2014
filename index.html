@@ -146,7 +146,7 @@
         <p>Her kommer beskrivelsen av hva du må gjøre her...</p>
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
-        <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
+        <a href="#oppgaver" data-role="button" data-icon="forward" class="task-postpone">Utsett oppgaven</a>
         <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
@@ -164,7 +164,7 @@
         <p>Her kommer beskrivelsen av hva du må gjøre her...</p>
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
-        <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
+        <a href="#oppgaver" data-role="button" data-icon="forward" class="task-postpone">Utsett oppgaven</a>
         <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
@@ -194,7 +194,7 @@
         </p>
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
-        <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
+        <a href="#oppgaver" data-role="button" data-icon="forward" class="task-postpone">Utsett oppgaven</a>
         <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
@@ -212,7 +212,7 @@
         <p>Her kommer beskrivelsen av hva du må gjøre her...</p>
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
-        <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
+        <a href="#oppgaver" data-role="button" data-icon="forward" class="task-postpone">Utsett oppgaven</a>
         <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
@@ -230,7 +230,7 @@
         <p>Her kommer beskrivelsen av hva du må gjøre her...</p>
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
-        <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
+        <a href="#oppgaver" data-role="button" data-icon="forward" class="task-postpone">Utsett oppgaven</a>
         <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
@@ -248,7 +248,7 @@
         <p>Her kommer beskrivelsen av hva du må gjøre her...</p>
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
-        <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
+        <a href="#oppgaver" data-role="button" data-icon="forward" class="task-postpone">Utsett oppgaven</a>
         <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
 
     </div>
@@ -267,7 +267,7 @@
         <p>Her kommer beskrivelsen av hva du må gjøre her...</p>
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
-        <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
+        <a href="#oppgaver" data-role="button" data-icon="forward" class="task-postpone">Utsett oppgaven</a>
         <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
@@ -470,10 +470,37 @@
     <div data-role="content">
         <h2>Tildel oppgaven</h2>
 
-        <a href="#index" data-role="button" id="tildel-kontakt">Velg fra kontakter</a>
-        <a href="#index" data-role="button" id="tildel-linkedin">Velg fra LinkedIn</a>
-        <a href="#index" data-role="button" id="tildel-facebook">Velg fra Facebook</a>
-        <a href="#index" data-role="button" id="tildel-epost">Skriv inn e-postadresse</a>
+        <a href="#tildel" data-role="button" id="tildel-kontakt">Velg fra kontakter</a>
+        <a href="#tildel" data-role="button" id="tildel-linkedin">Velg fra LinkedIn</a>
+        <a href="#tildel" data-role="button" id="tildel-facebook">Velg fra Facebook</a>
+        <a href="#tildel" data-role="button" id="tildel-epost">Skriv inn e-postadresse</a>
+    </div>
+</div>
+
+<div id="tildelt" data-role="page">
+    <div class="header">
+        <a class="back-button" href="#index">
+            <img src="images/back.png">
+        </a>
+        <h1>ASapp</h1>
+    </div>
+
+    <div data-role="content">
+        <table>
+            <tr>
+                <td>
+                    <img src="images/check.png" style="width: 2rem; margin-right: 1rem;">
+                </td>
+                <td>
+                    <h2>Oppgaven er tildelt</h2>
+                </td>
+            </tr>
+        </table>
+        <p>
+            En mail med instruksjoner har blitt sendt til Benedicte (benediof@gmail.com).
+            Du vil få beskjed hvis hun ikke har utført oppgaven når fristen nærmer seg.
+        </p>
+        <a href="#oppgaver" data-role="button">Oppgaver</a>
     </div>
 </div>
 
