@@ -34,7 +34,7 @@ function nyAnsatt(name) {
     addOppgave('skjema', 'Arbeidskontrakt for ' + name, '4. april', false, 'arbeidskontrakt');
     addOppgave('skjema', 'Tjenestepensjon for ' + name, '', false, 'tjenestepensjon');
     $.mobile.navigate("#oppgaver");
-    alertify.success("Du har fått nye oppgaver i forbindelse med " + name);
+    alertify.success("Du har fått nye oppgaver i forbindelse med ansettelsen");
 }
 
 var oppgaverInitialized = false;
