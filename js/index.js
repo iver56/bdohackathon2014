@@ -43,6 +43,14 @@ $(document).on("click", ".task-done", function (e) {
     removeOppgave(id);
 });
 
+$(document).on("click", ".task-postpone", function (e) {
+    var $button = $(this),
+        id = $button.closest('div[data-role=page]').attr('id'),
+        msg = 'Oppgaven er utsatt. Du får beskjed om den senere.';
+    alertify.success(msg);
+    removeOppgave(id);
+});
+
 $(document).on("click", "a[href=#tildel]", function (e) {
     var $button = $(this),
         id = $button.closest('div[data-role=page]').attr('id');
