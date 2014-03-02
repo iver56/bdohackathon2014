@@ -12,12 +12,22 @@ $(document).on("click", "#kvittering-lagre", function (e) {
 });
 
 $(document).on("click", "#ny-ansatt", function (e) {
-    addOppgave('skjema', 'Opprette yrkesskadeforsikring for Nils', '', false);
-    addOppgave('skjema', 'Melde ansettelse til NAV', '17. mars', false);
-    addOppgave('skjema', 'Arbeidskontrakt for Nils', '4. april', false);
-    addOppgave('skjema', 'Tjenestepensjon for Nils', '', false);
-    alertify.success("Du har fått nye oppgaver i forbindelse med ny ansatt");
+    e.preventDefault();
+    alertify.prompt("Hva heter den nye ansatte?", function (e, str) {
+        if (e) {
+            nyAnsatt(str);
+        }
+    }, "");
 });
+
+function nyAnsatt(name) {
+    addOppgave('skjema', 'Opprette yrkesskadeforsikring for ' + name, '', false);
+    addOppgave('skjema', 'Melde ansettelse til NAV', '17. mars', false);
+    addOppgave('skjema', 'Arbeidskontrakt for ' + name, '4. april', false);
+    addOppgave('skjema', 'Tjenestepensjon for ' + name, '', false);
+    $.mobile.navigate("#oppgaver");
+    alertify.success("Du har fått nye oppgaver i forbindelse med ny ansatt");
+}
 
 var oppgaverInitialized = false;
 $('#oppgaver').bind('pageinit', function() {
