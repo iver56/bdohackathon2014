@@ -93,9 +93,7 @@ function addOppgave(type, title, frist, done, id) {
         )
     );
     $('#oppgaver-ul').prepend($li)
-    if (oppgaverInitialized) {
-        $('#oppgaver-ul').listview('refresh');
-    }
+    refreshTasksList();
 }
 
 function removeOppgave(id) {
@@ -106,6 +104,10 @@ function removeOppgave(id) {
             $li.remove();
         }
     });
+    refreshTasksList();
+}
+
+function refreshTasksList() {
     if (oppgaverInitialized) {
         $('#oppgaver-ul').listview('refresh');
     }
