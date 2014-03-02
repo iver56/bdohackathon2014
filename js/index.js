@@ -35,7 +35,7 @@ $(document).on("change", "#week-day", function (e) {
 $(document).on("click", ".task-done", function (e) {
     var $button = $(this),
         id = $button.closest('div[data-role=page]').attr('id'),
-        msg = 'Bra jobba! :)';
+        msg = 'Bra jobba!';
     if ("oppgave3" === id) {
         msg += " Nå er det to måneder til neste gang";
     }
@@ -109,8 +109,10 @@ function refreshTasksList() {
     }
     if (0 === $('#oppgaver-ul').find('li').length) {
         $('#oppgaver .empty-list').show();
+        setStatus('green');
     } else {
         $('#oppgaver .empty-list').hide();
+        setStatus('yellow');
     }
 }
 
@@ -118,11 +120,14 @@ function setStatus(color) {
     if ('green' === color) {
         $('img.meter-image').attr('src', 'images/meter_green.png');
         $('div.meter-text-status').text('Alt er i skjønneste orden :)');
+        $('.oppgaver-button').attr('src', 'images/buttons/button-oppgaver.png');
     } else if ('yellow' === color) {
         $('img.meter-image').attr('src', 'images/meter_yellow.png');
         $('div.meter-text-status').text('Noe må gjøres snart');
+        $('.oppgaver-button').attr('src', 'images/buttons/button-oppgaver-yellow.png');
     } else if ('red' === color) {
         $('img.meter-image').attr('src', 'images/meter_red.png');
         $('div.meter-text-status').text('Noe må gjøres nå!');
+        $('.oppgaver-button').attr('src', 'images/buttons/button-oppgaver-red.png');
     }
 }

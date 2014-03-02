@@ -33,7 +33,7 @@
         <div class="meter-text-status">Noe må gjøres snart</div>
         <div class="buttons-wrapper">
             <a href="#oppgaver">
-                <img src="images/buttons/button-oppgaver-yellow.png">
+                <img src="images/buttons/button-oppgaver-yellow.png" class="oppgaver-button">
             </a>
             <a href="#endring">
                 <img src="images/buttons/button-endring.png">
@@ -147,7 +147,7 @@
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
         <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
-        <a href="#oppgaver" data-role="button" data-icon="user">Tildel oppgaven</a>
+        <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
 
@@ -165,7 +165,7 @@
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
         <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
-        <a href="#oppgaver" data-role="button" data-icon="user">Tildel oppgaven</a>
+        <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
 
@@ -183,7 +183,7 @@
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
         <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
-        <a href="#oppgaver" data-role="button" data-icon="user">Tildel oppgaven</a>
+        <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
 
@@ -201,7 +201,7 @@
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
         <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
-        <a href="#oppgaver" data-role="button" data-icon="user">Tildel oppgaven</a>
+        <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
 
@@ -219,7 +219,7 @@
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
         <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
-        <a href="#oppgaver" data-role="button" data-icon="user">Tildel oppgaven</a>
+        <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
 
@@ -237,7 +237,7 @@
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
         <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
-        <a href="#oppgaver" data-role="button" data-icon="user">Tildel oppgaven</a>
+        <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
 
     </div>
 </div>
@@ -256,7 +256,7 @@
 
         <a href="#oppgaver" data-role="button" data-icon="check" class="task-done">Oppgaven er utført</a>
         <a href="#oppgaver" data-role="button" data-icon="forward">Utsett oppgaven</a>
-        <a href="#oppgaver" data-role="button" data-icon="user">Tildel oppgaven</a>
+        <a href="#tildel" data-role="button" data-icon="user">Tildel oppgaven</a>
     </div>
 </div>
 
@@ -444,6 +444,24 @@
         <br>
 
         <a href="#index" data-role="button" data-icon="check" id="innstillinger-lagre">Lagre</a>
+    </div>
+</div>
+
+<div id="tildel" data-role="page">
+    <div class="header">
+        <a class="back-button" href="#index">
+            <img src="images/back.png">
+        </a>
+        <h1>ASapp</h1>
+    </div>
+
+    <div data-role="content">
+        <h2>Tildel oppgaven</h2>
+
+        <a href="#index" data-role="button" id="tildel-kontakt">Velg fra kontakter</a>
+        <a href="#index" data-role="button" id="tildel-linkedin">Velg fra LinkedIn</a>
+        <a href="#index" data-role="button" id="tildel-facebook">Velg fra Facebook</a>
+        <a href="#index" data-role="button" id="tildel-epost">Skriv inn e-postadresse</a>
     </div>
 </div>
 
