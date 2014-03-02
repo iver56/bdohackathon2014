@@ -60,3 +60,16 @@ function addOppgave(type, title, frist, done) {
     );
     $('#oppgaver-ul').prepend($li).listview('refresh');
 }
+
+function setStatus(color) {
+    if ('green' === color) {
+        $('img.meter-image').attr('src', 'images/meter_green.png');
+        $('div.meter-text-status').text('Alt er i skjønneste orden :)');
+    } else if ('yellow' === color) {
+        $('img.meter-image').attr('src', 'images/meter_yellow.png');
+        $('div.meter-text-status').text('Noe må gjøres snart');
+    } else if ('red' === color) {
+        $('img.meter-image').attr('src', 'images/meter_red.png');
+        $('div.meter-text-status').text('Noe må gjøres nå!');
+    }
+}
