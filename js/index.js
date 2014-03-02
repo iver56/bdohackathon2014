@@ -34,14 +34,14 @@ $(document).on("change", "#week-day", function (e) {
 
 $(document).on("change", ".task-done", function (e) {
     var $checkbox = $(this),
-        checked = $checkbox.prop('checked');
+        checked = $checkbox.prop('checked'),
+        id = $checkbox.closest('div[data-role=page]').attr('id');
     if (checked) {
         var msg = 'Bra jobba! :)';
-        if ("oppgave3-utford" === $(this).id) {
+        if ("oppgave3" === id) {
             msg += " Nå er det to måneder til neste gang";
         }
         alertify.success(msg);
-        var id = $checkbox.closest('div[data-role=page]').attr('id');
         removeOppgave(id);
         $.mobile.navigate("#oppgaver");
     }
