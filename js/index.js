@@ -25,23 +25,6 @@ function addKvittering(beskrivelse, dato, sum) {
 }
 
 function addOppgave(type, title, frist, done) {
-    /*<a href="#">
-        <table>
-            <tr>
-                <td>
-                    <img class="task-icon" src="images/task-icons/task-mva.png">
-                    </td>
-                    <td>
-                        <h3>Omsetningsoppgave</h3>
-                    </td>
-                    <td>
-                        <div class="check">
-                            <img src="images/check.png">
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </a>*/
     var $li = $('<li/>'),
         $anchor = $('<a/>'),
         $table = $('<table/>'),

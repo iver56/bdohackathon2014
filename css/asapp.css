@@ -111,10 +111,12 @@ a.back-button {
     width: 100%;
 }
 
+/*task icon*/
 #oppgaver-ul table td:first-child {
     width: 2rem;
 }
 
+/*task status*/
 #oppgaver-ul table td:nth-child(3) {
     width: 2.2rem;
     text-align: right;
