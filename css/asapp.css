@@ -106,3 +106,27 @@ a.back-button {
 .ui-btn-icon-left:after {
     background-color: #2EAFA4 !important;
 }
+
+#oppgaver-ul table {
+    width: 100%;
+}
+
+.task-icon {
+    width: 2rem;
+    position: relative;
+    margin-left: -.5rem;
+}
+
+.date-text {
+    font-size: .75rem !important;
+    text-align: center;
+}
+
+div.check {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+div.check img {
+    width: 100%;
+}

@@ -13,5 +13,5 @@ $(document).on("click", "#kvittering-lagre", function (e) {
         sum = $('#kvittering-sum').val(),
         $anchor = $('<a><h3>' + beskrivelse + '</h3><p>' + dato + '</p><p>Sum: ' + sum + ',-</p></a>'),
         $li = $('<li/>').append($anchor);
-    $('#kvitteringer-ul').append($li).listview('refresh');
+    $('#kvitteringer-ul').prepend($li).listview('refresh');
 });
