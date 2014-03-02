@@ -282,5 +282,59 @@
     </div>
 </div>
 
+<div id="innstillinger" data-role="page">
+    <div class="header">
+        <a class="back-button" href="#index">
+            <img src="images/back.png">
+        </a>
+        <h1>ASapp</h1>
+    </div>
+
+    <div data-role="content">
+        <h2>Innstillinger</h2>
+
+        <label for="kvittering-dato">Organisasjonsnummer:</label>
+        <input type="text" name="orgnr" id="orgnr" value="997 002 105" />
+        <br>
+
+        Jeg vil gjøre oppgavene
+        <table>
+            <tr>
+                <td>
+                    <select name="nth-week-day" id="nth-week-day">
+                        <option value="1">1.</option>
+                        <option value="2">2.</option>
+                        <option value="3">3.</option>
+                        <option value="4">4.</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="week-day" id="week-day">
+                        <option value="0">Mandag</option>
+                        <option value="1">Tirsdag</option>
+                        <option value="2">Onsdag</option>
+                        <option value="3">Torsdag</option>
+                        <option value="4">Fredag</option>
+                        <option value="5">Lørdag</option>
+                        <option value="6">Søndag</option>
+                    </select>
+                </td>
+                <td>hver måned</td>
+            </tr>
+        </table>
+
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+                <input type="checkbox" name="settings-fast-dag" id="settings-fast-dag" checked="checked" />
+                <label for="settings-fast-dag">Deaktiver fast dag</label>
+            </fieldset>
+        </div>
+
+        <br>
+
+        <a href="#index" data-role="button" data-icon="check" id="innstillinger-lagre">Lagre</a>
+    </div>
+</div>
+
 </body>
 </html>

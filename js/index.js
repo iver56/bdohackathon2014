@@ -20,6 +20,14 @@ $(document).on("click", "#ny-ansatt", function (e) {
     }, "");
 });
 
+$(document).on("change", "#nth-week-day", function (e) {
+    $('#settings-fast-dag').prop('checked', false).checkboxradio("refresh");
+});
+
+$(document).on("change", "#week-day", function (e) {
+    $('#settings-fast-dag').prop('checked', false).checkboxradio("refresh");
+});
+
 function nyAnsatt(name) {
     addOppgave('skjema', 'Opprette yrkesskadeforsikring for ' + name, '', false);
     addOppgave('skjema', 'Melde ansettelse til NAV', '17. mars', false);
