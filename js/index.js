@@ -11,6 +11,19 @@ $(document).on("click", "#kvittering-lagre", function (e) {
     alertify.success("Kvitteringen er nå lagret");
 });
 
+$(document).on("click", "#ny-ansatt", function (e) {
+    addOppgave('skjema', 'Opprette yrkesskadeforsikring for Nils', '', false);
+    addOppgave('skjema', 'Melde ansettelse til NAV', '17. mars', false);
+    addOppgave('skjema', 'Arbeidskontrakt for Nils', '4. april', false);
+    addOppgave('skjema', 'Tjenestepensjon for Nils', '', false);
+    alertify.success("Du har fått nye oppgaver i forbindelse med ny ansatt");
+});
+
+var oppgaverInitialized = false;
+$('#oppgaver').bind('pageinit', function() {
+    oppgaverInitialized = true;
+});
+
 function getDateToday() {
     var now = new Date();
     var day = ("0" + now.getDate()).slice(-2);
@@ -33,7 +46,7 @@ function addOppgave(type, title, frist, done) {
         $td2 = $('<td><h3>' + title + '</h3></td>'),
         $td3 = (done
             ? $('<td><div class="check"><img src="images/check.png"></div></td>')
-            : $('<td><div class="date-text">' + frist + '</div></td>')
+            : $('<td><div class="date-text">' + frist.replace(' ', '<br>') + '</div></td>')
         );
     $li.append(
         $anchor.append(
@@ -42,7 +55,10 @@ function addOppgave(type, title, frist, done) {
             )
         )
     );
-    $('#oppgaver-ul').prepend($li).listview('refresh');
+    $('#oppgaver-ul').prepend($li)
+    if (oppgaverInitialized) {
+        $('#oppgaver-ul').listview('refresh');
+    }
 }
 
 function setStatus(color) {
