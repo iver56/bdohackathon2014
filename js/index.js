@@ -32,6 +32,21 @@ $(document).on("change", "#week-day", function (e) {
     $('#settings-fast-dag').prop('checked', true).checkboxradio("refresh");
 });
 
+$(document).on("change", ".task-done", function (e) {
+    var $checkbox = $(this),
+        checked = $checkbox.prop('checked');
+    if (checked) {
+        var msg = 'Bra jobba! :)';
+        if ("oppgave3-utford" === $(this).id) {
+            msg += " Nå er det to måneder til neste gang";
+        }
+        alertify.success(msg);
+        var id = $checkbox.closest('div[data-role=page]').attr('id');
+        removeOppgave(id);
+        $.mobile.navigate("#oppgaver");
+    }
+});
+
 function nyAnsatt(name) {
     addOppgave('skjema', 'Yrkesskadeforsikring for ' + name, '', false, 'yrkesskadeforsikring');
     addOppgave('skjema', 'Melde ansettelse til NAV', '17. mars', false, 'aamelding');
@@ -78,6 +93,19 @@ function addOppgave(type, title, frist, done, id) {
         )
     );
     $('#oppgaver-ul').prepend($li)
+    if (oppgaverInitialized) {
+        $('#oppgaver-ul').listview('refresh');
+    }
+}
+
+function removeOppgave(id) {
+    $("#oppgaver-ul > li a").each(function() {
+        $a = $(this);
+        if ('#' + id === $a.attr('href')) {
+            $li = $a.closest('li');
+            $li.remove();
+        }
+    });
     if (oppgaverInitialized) {
         $('#oppgaver-ul').listview('refresh');
     }
