@@ -107,6 +107,11 @@ function refreshTasksList() {
     if (oppgaverInitialized) {
         $('#oppgaver-ul').listview('refresh');
     }
+    if (0 === $('#oppgaver-ul').find('li').length) {
+        $('#oppgaver .empty-list').show();
+    } else {
+        $('#oppgaver .empty-list').hide();
+    }
 }
 
 function setStatus(color) {
