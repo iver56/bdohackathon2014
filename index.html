@@ -28,7 +28,7 @@
         <div class="company-name">Microwax Systems AS</div>
         <img src="images/meter_yellow.png" class="meter-image">
         <div class="meter-text-status" style="display:none">Alt er i skjønneste orden :)</div>
-        <div class="meter-text-status" style="display:block">Snart må noe gjøres</div>
+        <div class="meter-text-status" style="display:block">Noe må gjøres snart</div>
         <div class="meter-text-status" style="display:none">Noe må gjøres nå!</div>
         <div class="buttons-wrapper">
             <a href="#oppgaver">
@@ -37,13 +37,10 @@
             <a href="#endring">
                 <img src="images/buttons/button-endring.png">
             </a>
-            <a href="#bilag">
+            <a href="#kvitteringer">
                 <img src="images/buttons/button-kvitteringer.png">
             </a>
-            <a href="#valg">
-                <img src="images/buttons/button-hjelp.png">
-            </a>
-            <a href="#hjelp">
+            <a href="#innstillinger">
                 <img src="images/buttons/button-innstillinger.png">
             </a>
         </div>
@@ -51,14 +48,14 @@
         <div class="fun-fact">
             <img src="images/funfact.png" class="fun-fact-icon"> <span>Fun fact</span>
             <p>
-                Yo blablablabla lorem ipsum. Og så videre og så videre... Her kommer det sannsynligvis en litt morsom tekst.
+                Du leverte forrige omsetningsoppgave tidligere enn 69% av selskapene i din bransje!
             </p>
+            <img src="images/funfact1.png" style="width: 100%;">
         </div>
     </div>
-
 </div>
 
-<div id="bilag" data-role="page">
+<div id="oppgaver" data-role="page">
     <div class="header">
         <a class="back-button" href="#index">
             <img src="images/back.png">
@@ -67,24 +64,95 @@
     </div>
 
     <div data-role="content">
-        <div class="buttons-wrapper">
-            <a href="#oppgaver">
-                <img src="images/buttons/button-ny-kvittering.png">
-            </a>
-        </div>
-        <ul class="receipt" data-inset="true" data-role="listview">
+        <ul data-role="listview" id="oppgaver-ul">
             <li>
-                <a href="#kvittering">
-                    <h3>Restaurant besøk</h3>
-                    <p>25.02.14 </p>
-                    <p>Sum: NOK 320,- </p>
-                </a> 
+                <a href="#">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="task-icon" src="images/task-icons/task-mva.png">
+                            </td>
+                            <td>
+                                <h3>Omsetningsoppgave</h3>
+                            </td>
+                            <td>
+                                <div class="date-text">13.<br>mars</div>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="task-icon" src="images/task-icons/task-mva.png">
+                            </td>
+                            <td>
+                                <h3>Omsetningsoppgave</h3>
+                            </td>
+                            <td>
+                                <div class="check">
+                                    <img src="images/check.png">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="task-icon" src="images/task-icons/task-mva.png">
+                            </td>
+                            <td>
+                                <h3>Omsetningsoppgave</h3>
+                            </td>
+                            <td>
+                                <div class="check">
+                                    <img src="images/check.png">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="kvitteringer" data-role="page">
+    <div class="header">
+        <a class="back-button" href="#index">
+            <img src="images/back.png">
+        </a>
+        <h1>ASapp</h1>
+    </div>
+
+    <div data-role="content">
+        <div class="image-upload">
+            <label for="kvittering-file-input">
+                <img src="images/buttons/button-ny-kvittering.png"/>
+            </label>
+            <input id="kvittering-file-input" type="file" data-role="none" />
+        </div>
+
+        <ul data-role="listview" data-inset="true" id="kvitteringer-ul">
+            <li>
+                <a href="#kvittering1">
+                    <h3>Restaurantbesøk</h3>
+                    <p>25.02.14</p>
+                    <p>Sum: 320,-</p>
+                </a>
             </li>
             <li>
                 <a href="#kvittering2">
                     <h3>Tekniske innkjøp</h3>
-                    <p>14.02.14 </p>
-                    <p>Sum: NOK 247,-</p>
+                    <p>14.02.14</p>
+                    <p>Sum: 247,-</p>
                 </a>
             </li>
         </ul>
@@ -109,9 +177,9 @@
     </div>
 </div>
 
-<div id="kvittering" data-role="page">
+<div id="kvittering1" data-role="page">
     <div class="header">
-        <a class="back-button" href="#bilag">
+        <a class="back-button" href="#kvitteringer">
             <img src="images/back.png">
         </a>
         <h1>ASapp</h1>
@@ -132,23 +200,47 @@
 
 <div id="kvittering2" data-role="page">
     <div class="header">
-        <a class="back-button" href="#bilag">
+        <a class="back-button" href="#kvitteringer">
+            <img src="images/back.png">
+        </a>
+        <h1>ASapp</h1>
+    </div>
+
+    <div data-role="content"> 
+        <img src="images/kvittering2.jpg" width="99%">
+        
+        <div class="buttons-wrapper">
+            <a href="">
+                <img src="images/buttons/button-send.png">
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div id="kvittering-input" data-role="page">
+    <div class="header">
+        <a class="back-button" href="#kvitteringer">
             <img src="images/back.png">
         </a>
         <h1>ASapp</h1>
     </div>
 
     <div data-role="content">
-        <div>
-             <img src="images/kvittering2.jpg" width="99%">
-        </div>
+        <h2>Lagre kvitteringen</h2>
 
-        <div class="buttons-wrapper">
-            <a href="">
-                <img src="images/buttons/button-send.png">
-            </a>
-        </div>
+        <label for="kvittering-dato">Dato:</label>
+        <input type="text" name="kvittering-dato" id="kvittering-dato" value="" />
+
+        <label for="kvittering-beskrivelse">Beskrivelse:</label>
+        <input type="text" name="kvittering-beskrivelse" id="kvittering-beskrivelse" value="" />
+
+        <label for="kvittering-sum">Sum:</label>
+        <input type="text" name="kvittering-sum" id="kvittering-sum" value="" />
+
+        <a href="#kvitteringer" data-role="button" data-icon="check" id="kvittering-lagre">Lagre</a>
     </div>
 </div>
+
 </body>
 </html>

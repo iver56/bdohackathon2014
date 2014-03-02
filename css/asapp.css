@@ -75,7 +75,7 @@ a.back-button {
 
 .buttons-wrapper a {
     display: block;
-    margin: .25rem 0;
+    margin: .2rem 0;
 }
 
 .buttons-wrapper img {
@@ -86,7 +86,56 @@ a.back-button {
     white-space:normal;
 }​
 
-.receipt{
+.receipt {
     padding: 10.5rem;
+}
 
+.image-upload input
+{
+    display: none;
+}
+
+.image-upload img {
+    width: 100%;
+}
+
+.ui-btn-icon-right:after {
+    background-color: #2EAFA4 !important;
+}
+
+.ui-btn-icon-left:after {
+    background-color: #2EAFA4 !important;
+}
+
+#oppgaver-ul table {
+    width: 100%;
+}
+
+#oppgaver-ul table td:first-child {
+    width: 2rem;
+}
+
+#oppgaver-ul table td:nth-child(3) {
+    width: 2.2rem;
+    text-align: right;
+}
+
+.task-icon {
+    width: 2rem;
+    position: relative;
+    margin-left: -.5rem;
+}
+
+.date-text {
+    font-size: .75rem !important;
+    text-align: center;
+}
+
+div.check {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+div.check img {
+    width: 100%;
 }
