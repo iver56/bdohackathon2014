@@ -25,11 +25,11 @@ $(document).on("click", "#ny-ansatt", function (e) {
 });
 
 $(document).on("change", "#nth-week-day", function (e) {
-    $('#settings-fast-dag').prop('checked', false).checkboxradio("refresh");
+    $('#settings-fast-dag').prop('checked', true).checkboxradio("refresh");
 });
 
 $(document).on("change", "#week-day", function (e) {
-    $('#settings-fast-dag').prop('checked', false).checkboxradio("refresh");
+    $('#settings-fast-dag').prop('checked', true).checkboxradio("refresh");
 });
 
 function nyAnsatt(name) {
