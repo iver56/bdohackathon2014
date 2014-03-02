@@ -11,6 +11,10 @@ $(document).on("click", "#kvittering-lagre", function (e) {
     alertify.success("Kvitteringen er nå lagret");
 });
 
+$(document).on("click", "#innstillinger-lagre", function (e) {
+    alertify.success("Innstillingene ble lagret");
+});
+
 $(document).on("click", "#ny-ansatt", function (e) {
     e.preventDefault();
     alertify.prompt("Hva heter den nye ansatte?", function (e, str) {
@@ -38,7 +42,7 @@ function nyAnsatt(name) {
 }
 
 var oppgaverInitialized = false;
-$('#oppgaver').bind('pageinit', function() {
+$(document).on('pageinit', '#oppgaver', function() {
     oppgaverInitialized = true;
 });
 

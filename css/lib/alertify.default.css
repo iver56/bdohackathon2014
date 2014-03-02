@@ -53,13 +53,13 @@
 		.alertify-button-cancel,
 		.alertify-button-cancel:hover,
 		.alertify-button-cancel:focus {
-			background-color: #FE1A00;
+			background-color: #930534;
 			border: 1px solid #D83526;
 		}
 		.alertify-button-ok,
 		.alertify-button-ok:hover,
 		.alertify-button-ok:focus {
-			background-color: #5CB811;
+			background-color: #00A095;
 			border: 1px solid #3B7808;
 		}
 
@@ -76,6 +76,6 @@
 		background: rgba(254,26,0,.9);
 	}
 	.alertify-log-success {
-		background: #5CB811;
-		background: rgba(92,184,17,.9);
+		background: #00A095;
+		background: rgba(0,160,149,.9);
 	}
