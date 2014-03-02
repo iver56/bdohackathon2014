@@ -32,19 +32,15 @@ $(document).on("change", "#week-day", function (e) {
     $('#settings-fast-dag').prop('checked', true).checkboxradio("refresh");
 });
 
-$(document).on("change", ".task-done", function (e) {
-    var $checkbox = $(this),
-        checked = $checkbox.prop('checked'),
-        id = $checkbox.closest('div[data-role=page]').attr('id');
-    if (checked) {
-        var msg = 'Bra jobba! :)';
-        if ("oppgave3" === id) {
-            msg += " Nå er det to måneder til neste gang";
-        }
-        alertify.success(msg);
-        removeOppgave(id);
-        $.mobile.navigate("#oppgaver");
+$(document).on("click", ".task-done", function (e) {
+    var $button = $(this),
+        id = $button.closest('div[data-role=page]').attr('id'),
+        msg = 'Bra jobba! :)';
+    if ("oppgave3" === id) {
+        msg += " Nå er det to måneder til neste gang";
     }
+    alertify.success(msg);
+    removeOppgave(id);
 });
 
 function nyAnsatt(name) {
