@@ -8,6 +8,7 @@ $(document).on("click", "#kvittering-lagre", function (e) {
         dato = $('#kvittering-dato').val(),
         sum = $('#kvittering-sum').val();
     addKvittering(beskrivelse, dato, sum);
+    alertify.success("Kvitteringen er nå lagret");
 });
 
 function getDateToday() {
