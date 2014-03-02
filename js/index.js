@@ -29,12 +29,12 @@ $(document).on("change", "#week-day", function (e) {
 });
 
 function nyAnsatt(name) {
-    addOppgave('skjema', 'Opprette yrkesskadeforsikring for ' + name, '', false);
-    addOppgave('skjema', 'Melde ansettelse til NAV', '17. mars', false);
-    addOppgave('skjema', 'Arbeidskontrakt for ' + name, '4. april', false);
-    addOppgave('skjema', 'Tjenestepensjon for ' + name, '', false);
+    addOppgave('skjema', 'Yrkesskadeforsikring for ' + name, '', false, 'yrkesskadeforsikring');
+    addOppgave('skjema', 'Melde ansettelse til NAV', '17. mars', false, 'aamelding');
+    addOppgave('skjema', 'Arbeidskontrakt for ' + name, '4. april', false, 'arbeidskontrakt');
+    addOppgave('skjema', 'Tjenestepensjon for ' + name, '', false, 'tjenestepensjon');
     $.mobile.navigate("#oppgaver");
-    alertify.success("Du har fått nye oppgaver i forbindelse med ny ansatt");
+    alertify.success("Du har fått nye oppgaver i forbindelse med " + name);
 }
 
 var oppgaverInitialized = false;
@@ -55,9 +55,9 @@ function addKvittering(beskrivelse, dato, sum) {
     $('#kvitteringer-ul').prepend($li).listview('refresh');
 }
 
-function addOppgave(type, title, frist, done) {
+function addOppgave(type, title, frist, done, id) {
     var $li = $('<li/>'),
-        $anchor = $('<a/>'),
+        $anchor = $('<a href="#' + id + '"/>'),
         $table = $('<table/>'),
         $tr = $('<tr/>'),
         $td1 = $('<td><img class="task-icon" src="images/task-icons/task-' + type + '.png"></td>'),
