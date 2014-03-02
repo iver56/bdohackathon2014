@@ -43,6 +43,12 @@ $(document).on("click", ".task-done", function (e) {
     removeOppgave(id);
 });
 
+$(document).on("click", "a[href=#tildel]", function (e) {
+    var $button = $(this),
+        id = $button.closest('div[data-role=page]').attr('id');
+    removeOppgave(id);
+});
+
 $(document).on("click", "#tildel-epost", function (e) {
     e.preventDefault();
     alertify.prompt("Skriv inn e-postadressen", function (e, str) {
